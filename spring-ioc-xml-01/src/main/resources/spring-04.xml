@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--
     指定init 和destory方法，ioc容器会自动调用-->
-    <bean id="javaBean" class="com.xd.ioc_04.JavaBean" init-method="init" destroy-method="clear"/>
+    <bean id="javaBean" class="com.com.xd.ioc_04.JavaBean" init-method="init" destroy-method="clear"/>
     <!--
     声明Bean默认单例模式singleton，在ioc容器初始化时创建bean
     prototype 多例模式，在getbean时创建bean-->
-    <bean id="javaBean2" class="com.xd.ioc_04.JavaBean2" scope="prototype"/>
+    <bean id="javaBean2" class="com.com.xd.ioc_04.JavaBean2" scope="prototype"/>
 </beans>

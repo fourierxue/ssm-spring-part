@@ -12,21 +12,21 @@
 
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="url" value="${xd.url}"/>
-        <property name="driverClassName" value="${xd.driver}"/>
-        <property name="username" value="${xd.username}"/>
-        <property name="password" value="${xd.password}"/>
+        <property name="url" value="${com.xd.url}"/>
+        <property name="driverClassName" value="${com.xd.driver}"/>
+        <property name="username" value="${com.xd.username}"/>
+        <property name="password" value="${com.xd.password}"/>
     </bean>
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <bean id="studentDao" class="com.xd.dao.impl.StudentDaoImpl">
+    <bean id="studentDao" class="com.com.xd.dao.impl.StudentDaoImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
-    <bean id="studentService" class="com.xd.service.impl.StudentServiceImpl">
+    <bean id="studentService" class="com.com.xd.service.impl.StudentServiceImpl">
         <property name="studentDao" ref="studentDao"/>
     </bean>
-    <bean id="studentController" class="com.xd.controller.StudentController">
+    <bean id="studentController" class="com.com.xd.controller.StudentController">
         <property name="service" ref="studentService"/>
     </bean>
 </beans>
