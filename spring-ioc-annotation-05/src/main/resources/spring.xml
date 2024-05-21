@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 自己的类注解扫描-->
-    <context:component-scan base-package="com.com.xd"/>
+    <context:component-scan base-package="com.xd"/>
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <!-- 第三方类依然使用bean标签配置-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">

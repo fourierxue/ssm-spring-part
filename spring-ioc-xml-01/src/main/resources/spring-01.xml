@@ -5,14 +5,14 @@
     <!--1、使用无参构造函数的组价，如何进行ioc配置
     id 唯一标识
     class 全限定符-->
-    <bean id="happyComponent" class="com.com.xd.ioc_01.HappyComponent"/>
+    <bean id="happyComponent" class="com.xd.ioc_01.HappyComponent"/>
     <!--2、静态工厂类进行ioc配置
     class 工厂类的全限定符，本例中工厂类和最终的产品类相同
     factory-methon 静态工厂方法，必须是static方法-->
-    <bean id="clientService" class="com.com.xd.ioc_01.ClientService" factory-method="createInstance"/>
+    <bean id="clientService" class="com.xd.ioc_01.ClientService" factory-method="createInstance"/>
     <!--3、非静态工厂进行ioc配置-->
     <!--3.1 配置工厂类组件信息-->
-    <bean id="defalutServiceLocator" class="com.com.xd.ioc_01.DefaultServiceLocator"/>
+    <bean id="defalutServiceLocator" class="com.xd.ioc_01.DefaultServiceLocator"/>
     <!--3.2 指定非静态工厂对象和方法名，必须是非静态方法-->
     <bean id="clientServiceImpl" factory-bean="defalutServiceLocator" factory-method="createClientServiceInstance"/>
 </beans>

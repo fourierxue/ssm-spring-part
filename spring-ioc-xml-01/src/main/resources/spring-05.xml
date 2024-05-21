@@ -6,7 +6,7 @@
     id getObject方法返回的对象的id
     factorybean工厂也会加入到ioc容器，id为&id，本例中为&javaBean
     class factorybean标准化工厂类 -->
-    <bean id="javaBean" class="com.com.xd.ioc_05.JavaBeanFactoryBean">
+    <bean id="javaBean" class="com.xd.ioc_05.JavaBeanFactoryBean">
         <!-- 此处配置的是factorybean的属性，在factoryBean中间接给javaBean赋值-->
         <property name="value" value="xxxx"/>
     </bean>
